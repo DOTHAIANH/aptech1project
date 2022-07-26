@@ -1,10 +1,8 @@
 $(document).ready(function(){
-    $(".slide-show-skate").slick({
-        slidesToShow: 1,
+    $(".owl-stage").slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow:`<button type='button' class='slick-prev pull-left'><i class="fa-solid fa-angle-left"></i></button>`,
-        nextArrow:`<button type='button' class='slick-next pull-right'><i class="fa-solid fa-angle-right"></i></button>`,
-        dots: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,

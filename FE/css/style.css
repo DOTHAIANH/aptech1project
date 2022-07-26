@@ -426,6 +426,138 @@ footer .show {
     font-size: 14px;
 }
 
+/* SLIDE */
+.slick-prev {
+}
+
+.slick-arrow {
+    position: absolute;
+    font-size: 28px;
+    padding: 15px;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #000;
+    border: none;
+    z-index: 2;
+    top: 50%;
+    transition: all 150ms ease-in-out;
+}
+
+.slick-arrow:hover {
+    color: #ccc;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50% , 50px);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    transition: all 150ms ease-in-out;
+}
+
+.slick-dots .slick-active button {
+    background-color: #1a1a1a;
+}
+
+/* BANNER */
+
+.img-banner1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.i_b {
+    display: inline-block !important;
+}
+
+.img-banner1:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(67,69,113,0);
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+.img-banner1:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(67,69,113,0);
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+/* TAB_PRODUCT */
+
+.title-section h2 {
+    font-size: 34px;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.title-section {
+    text-align: center;
+}
+
+.title_tabs {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.title_tabs ul {
+    display: flex;
+    justify-content: center;
+}
+
+.title_tabs ul li {
+    height: 40px;
+    line-height: 35px;
+    border: 2px solid #ebebeb;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    transition: all 150ms ease-in-out;
+}
+
+.title_tabs ul li:hover {
+    border-color: #898989;
+}
+
 /* RESPONSIVE */
 
 @media (min-width:1200px) {
