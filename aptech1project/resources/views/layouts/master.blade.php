@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKATESHOP Project</title>
+
     <!-- Styles  -->
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
     @yield('css')
+
     <!-- Fonts  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,16 +18,18 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+
 </head>
 <!-- Header  -->
-<header>
+<!-- style="position: fixed; top:0px;left:0px;right:0px;z-index:1px; background: #fff !important;" -->
+<header >
     <div class="container">
         <div class="header-main">
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
                         <a href="" class="logo-wrapper">
-                            <img src="css/img/header/logo.webp" alt="logo">
+                            <img src="{{ asset('image/header/logo.webp') }}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -266,7 +270,7 @@
     </div>
 </header>
 <!-- Main content  -->
-<main>
+<main style="z-index: 0.5;">
     @yield('content')
 </main>
 <!-- Footer  -->
@@ -367,6 +371,8 @@
         </div>
     </div>
 </footer>
+
+<!-- Scripts  -->
 </body>
 
 </html>
