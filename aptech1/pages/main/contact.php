@@ -1,3 +1,21 @@
+<?php 
+    require_once("config/dbhelp.php");
+    $fullname = $email = $phone_number = $content = $created_at = '';
+    if(!empty($_POST)) {
+        $fullname = getPost('fullname');
+        $email = getPost('email');
+        $phone_number = getPost('phone_number');
+        $content = getPost('content');
+        $created_at = date('Y-m-d H:i:s');
+
+        $sql = "INSERT INTO contact (fullname,email,phone_number,content,created_at)
+        VALUES ('$fullname','$email','$phone_number','$content','$created_at')";
+        execute($sql);
+        echo"<script>alert('Bạn đã gửi liên hệ thành công')</script>";
+    }
+?>
+
+
 <!--Main content  -->
 <div class="col-xs-12 container">
             <div class="row col-xl-12">
@@ -64,7 +82,7 @@
                     <h2 class="title-head">
                         <span>Gửi thông tin liên hệ</span>
                     </h2>
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="form-group">
                             <input required type="text" name="fullname" placeholder="Họ tên*" id="fullname" class="form-control">
                         </div>
@@ -73,9 +91,6 @@
                         </div>
                         <div class="form-group">
                             <input required type="text" name="phone_number" placeholder="Điện thoại*" id="phone_number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input required type="password" name="password" placeholder="Mật khẩu*" id="email" class="form-control">
                         </div>
                         <div class="form-group">
                             <textarea name="content" id="content" cols="30" rows="5" class="form-control" placeholder="Nhập nội dung*"></textarea>

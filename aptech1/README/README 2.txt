@@ -29,3 +29,12 @@ CREATE TABLE admin (
 	id int PRIMARY KEY AUTO_INCREMENT,
     name varchar(10)
 )
+
+CREATE TABLE contact (
+	id int PRIMARY KEY AUTO_INCREMENT,
+    fullname varchar(50),
+    email varchar(100),
+    phone_number varchar(15),
+    content longtext,
+    created_at datetime
+)

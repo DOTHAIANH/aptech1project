@@ -55,7 +55,7 @@
                                 <div class="info fix-width-text">
                                     <strong>Tài khoản</strong>
                                     <p>
-                                        <a href="index.php?manage=login">Đăng nhập</a>/<a href="index.php?register">Đăng ký</a>
+                                        <a href="account/login.php">Đăng nhập</a>/<a href="account/register.php">Đăng ký</a>
                                     </p>
                                 </div>
                             </div>

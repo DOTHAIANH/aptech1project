@@ -82,10 +82,7 @@
             <div class="container">
                 <div class="inner">
                     <div class="row">
-                        <div class="col-6" style="text-align:left;">
-                            <span>© Bản quyền thuộc về <b>SAIGON SKATESHOP</b> <span class="fot-line">|</span> Cung cấp bởi <a href="" title="Sapo" rel="nofollow" target="_blank">Sapo</a></span>
-                        </div>
-                        <div class="col-6" style="text-align:right;">
+                        <div class="col-6" style="text-align: right;">
                             <div class="back-to-header show end">Lên đầu trang
                                 <i class="fa-solid fa-circle-arrow-up"></i>
                             </div>
