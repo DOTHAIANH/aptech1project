@@ -1,6 +1,6 @@
 <?php 
     require_once('../config/dbhelp.php');
-    if( isset($_GET['action']) && $_GET['query'] ) {
+    if( isset($_GET['action']) && isset($_GET['query']) ) {
         $temp = $_GET['action'];
         $query = $_GET['query'];
     }

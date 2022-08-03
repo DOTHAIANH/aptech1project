@@ -17,23 +17,31 @@
 
 
 <!--Main content  -->
-<div class="col-xs-12 container">
-            <div class="row col-xl-12">
-                <ul class="breadcrump text-uppercase">
-                    <li class="home">
-                        <a href="">Trang chủ</a>
-                        <span>
-                            <i class="fa fa-angle-right"> </i>
-                        </span>
-                    </li>
-                    <li>
-                        Liên hệ
-                    </li>
-                </ul>
+    <section class="bread-crumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="list-inline">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-house"></i>
+                                <a href="">
+                                    <span>Trang chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <span>LIÊN HỆ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr style="margin-bottom: 80px;">
-        <div class="container contact">
+    </section>
+        <section class="container contact">
             <div class="box-heading relative">
                 <h1 class="title-head page_title">LIÊN HỆ
                 </h1>
@@ -67,8 +75,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="box-maps relative">
+        </section>
+        <section class="box-maps relative">
             <div class="iFrameMap">
                 <div class="google-map">
                     <div class="contact_map">
@@ -101,4 +109,4 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>

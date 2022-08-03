@@ -55,12 +55,12 @@
                                 <div class="info fix-width-text">
                                     <strong>Tài khoản</strong>
                                     <p>
-                                        <a href="account/login.php">Đăng nhập</a>/<a href="account/register.php">Đăng ký</a>
+                                        <a href="index.php?route=login">Đăng nhập</a>/<a href="index.php?route=register">Đăng ký</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="header-block-item mini-cart">
-                                <a href="index.php?manage=cart" class="cart-label header-icon">
+                                <a href="index.php?route=cart" class="cart-label header-icon">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <div class="cart-info">
                                         <span style="line-height: 1;color: #555;display: block;font-weight: 600;font-size: 16px;">Giỏ hàng</span> (
@@ -80,173 +80,17 @@
                         <li class="nav-item nav-text-before">
                             <a href="index.php">TRANG CHỦ</a>
                         </li>
-                        <!-- <li class="nav-item nav-text-before has-mega">
-                            <a href="nav-link">SẢN PHẨM
-                                <i class="fa-solid fa-angle-down"></i>
-                            </a>
-                            <div class="mega-content">
-                                <div class="l0-w2">
-                                    <div class="nav-block nav-block-center">
-                                        <ul class="l0">
-                                            <li class="l1 parent item">
-                                                <h2 class="h4">
-                                                    <a href="">
-                                                        <span>SKATE</span>
-                                                    </a>
-                                                </h2>
-                                                <ul class="l1">
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Deck</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Trucks</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Wheels</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Bearings</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Grip Tape</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="l1 parent item">
-                                                <h2 class="h4">
-                                                    <a href="">
-                                                        <span>SKATE PARTS</span>
-                                                    </a>
-                                                </h2>
-                                                <ul class="l1">
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Hardware & Trucks Accessories</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Tools</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Bushings & Pivots & Riser Pads</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Wax</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Fingerboards & Toys</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="l1 parent item">
-                                                <h2 class="h4">
-                                                    <a href="">
-                                                        <span>PROTECTIVE GEAR</span>
-                                                    </a>
-                                                </h2>
-                                                <ul class="l1">
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Helmets</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Pads</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Gloves</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="l1 parent item">
-                                                <h2 class="h4">
-                                                    <a href="">
-                                                        <span>COMPLETES</span>
-                                                    </a>
-                                                </h2>
-                                                <ul class="l1">
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Skateboard Completes</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Cruiser Completes</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Longboard Completes</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Bearings</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="l2">
-                                                        <a href="">
-                                                            <span>Penny Skateboards</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
-                        <!-- <li class="nav-item nav-text-before has-mega">
-                            <a href="nav-link">SẢN PHẨM 
-                                <i class="fa-solid fa-angle-down"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-text-before has-mega">
-                            <a href="nav-link">TIN TỨC 
-                                <i class="fa-solid fa-angle-down"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-text-before has-mega">
-                            <a href="nav-link">LIÊN HỆ 
-                                <i class="fa-solid fa-angle-down"></i>
-                            </a>
-                        </li> -->
-                        <!-- <li class="nav-item nav-text-before has-mega">
-                            <a href="nav-link">CUSTOMER SERVICES 
-                                <i class="fa-solid fa-angle-down"></i>
-                            </a>
-                        </li> -->
                         <li class="nav-item">
-                            <a href="index.php?manage=category">SẢN PHẨM</a>
+                            <a href="index.php?route=category">SẢN PHẨM</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php?manage=news">TIN TỨC</a>
+                            <a href="index.php?route=news">TIN TỨC</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php?manage=contact">LIÊN HỆ</a>
+                            <a href="index.php?route=contact">LIÊN HỆ</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php?manage=sale">GIẢM GIÁ</a>
+                            <a href="index.php?route=sale">GIẢM GIÁ</a>
                         </li>
                     </ul>
                 </div>

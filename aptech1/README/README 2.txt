@@ -25,9 +25,15 @@ CREATE TABLE admin (
 )
 
 ---
- CREATE TABLE role (
-	id int PRIMARY KEY AUTO_INCREMENT,
-    name varchar(10)
+create Table infoSite( 
+    id int primary key AUTO_INCREMENT,
+    address varchar(100),
+    phone_number varchar(100),
+    email varchar(100),
+    title text,
+    facebook varchar(100),
+    instagram varchar(100),
+    logo varchar(100)
 )
 
 CREATE TABLE contact (

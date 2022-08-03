@@ -55,18 +55,6 @@ form {
     height: 40px;
 }
 
-.mt-15px {
-    margin-top: 15px;
-}
-
-.ml-10px {
-    margin-left: 10px;
-}
-
-.mr-10px {
-    margin-right: 10px;
-}
-
 .btn,
 input[type="submit"] {
     height: 40px;
