@@ -12,8 +12,8 @@
     else if($temp=='cart') {
         include("main/cart.php");
     }
-    else if($temp=='detail') {
-        include("main/detail.php");
+    else if($temp=='details') {
+        include("main/details.php");
     }
     else if($temp=='contact') {
         include("main/contact.php");
@@ -26,6 +26,9 @@
     }
     else if($temp=='forgot') {
         include("user/change-pwd.php");
+    }
+    else if($temp=='sale') {
+        include("main/sale.php");
     }
     else {
         include("main/index.php");

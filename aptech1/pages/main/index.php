@@ -107,7 +107,7 @@
     <section class="tab_product">
         <div class="container">
             <div class="title-section">
-                <h2> FEATURE PRODUCT </h2>
+                <h2> SẢN PHẨM </h2>
             </div>
             <div class="e_tabs">
                 <div class="container">

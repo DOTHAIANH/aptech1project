@@ -25,7 +25,7 @@
                         <ul>
                             <li>
                                 <i class="fa-solid fa-house"></i>
-                                <a href="">
+                                <a href="index.php">
                                     <span>Trang chủ</span>
                                 </a>
                             </li>

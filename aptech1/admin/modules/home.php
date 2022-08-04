@@ -10,10 +10,15 @@
 
     if($temp=='productCategory'  && $query=='add') {
         include("modules/product category/index.php");
-        include("modules/product category/add.php"); 
     }
     else if($temp=='productCategory' && $query=='edit') {
         include("modules/product category/edit.php");
+    }
+    else if($temp=='productDetails' && $query=='add') {
+        include("modules/product details/index.php");
+    }
+    else if($temp=='productDetails' && $query=='edit') {
+        include("modules/product details/edit.php");
     }
     else if($temp=='contact') {
         include("modules/contact/index.php");

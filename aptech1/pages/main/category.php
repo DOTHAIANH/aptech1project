@@ -6,7 +6,7 @@
                         <ul>
                             <li>
                                 <i class="fa-solid fa-house"></i>
-                                <a href="">
+                                <a href="index.php">
                                     <span>Trang chủ</span>
                                 </a>
                             </li>
@@ -32,17 +32,15 @@
                                 <p>DANH MỤC</p>
                             </div>
                             <li>
-                                <a href="">
+                                <a href="index.php">
                                     <i class="fa-solid fa-caret-right"></i>
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li>                          
-                                <a href="">
                                     <i class="fa-solid fa-caret-right"></i>
                                     <span>Skateboards</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </a>                               
+                                    <i class="fa-solid fa-angle-down"></i>                             
                             </li>
                             <li>
                                 
@@ -111,7 +109,7 @@
                                             </a>
                                         </div>
                                         <div class="product-info">
-                                            <h3 class="product-name"><a href="">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
+                                            <h3 class="product-name"><a href="index.php?route=details">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
                                             <div class="price-box">
                                                 <div class="special-price">
                                                     <span>3.450.000đ</span>

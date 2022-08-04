@@ -44,7 +44,7 @@
         <td>".$item['created_at']."</td>
         <td>
         <a href='modules/contact/delete.php?id=".$item["id"]." '>
-            <button class='btn btn-danger'>Delete</button>
+            <button class='btn btn-danger'>Xóa</button>
           </a>
         </td>
       </tr> ";
