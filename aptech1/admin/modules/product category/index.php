@@ -1,17 +1,10 @@
-<?php
-     $name = '';
-     if(!empty($_POST)) {
-       $name = getPost('name');
-       $sql_add = "insert into category (name) value ('$name')";
-       execute($sql_add);
-     }
-?>
+
 <style>
 </style>
 <h2>Quản lý danh mục sản phẩm</h2>
 
 <div class="container mt-3">
-  <form method="post">
+  <form method="post" action="modules/product category/add.php">
     <table class="table">
             <h3>Thêm danh mục</h3>
         <tr>
@@ -51,7 +44,7 @@
         <td>".++$index."</td>
         <td>".$item['name']."</td>
         <td>
-        <a href='?action=productCategory&query=edit&id=".$item["id"]." '>
+        <a href='?action=productCategory&query=edit&id=".$item["id"]."'>
             <button class='btn btn-danger'>Sửa</button>
           </a>
         </td>

@@ -80,12 +80,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=productCategory&query=add">
+            <a class="nav-link" href="index.php?action=productCategory">
               <span class="menu-title">Quản lý danh mục sản phẩm</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=productDetails&query=add">
+            <a class="nav-link" href="index.php?action=productDetails">
               <span class="menu-title">Quản lý sản phẩm</span>
             </a>
           </li>
@@ -100,7 +100,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=contact&query=add">
+            <a class="nav-link" href="index.php?action=contact">
               <span class="menu-title">Quản lý phản hồi</span>
             </a>
           </li>

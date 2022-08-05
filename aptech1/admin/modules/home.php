@@ -1,26 +1,32 @@
 <?php 
     require_once('../config/dbhelp.php');
-    if( isset($_GET['action']) && isset($_GET['query']) ) {
-        $temp = $_GET['action'];
+    if( isset($_GET['query']) ) {
         $query = $_GET['query'];
     }
     else {
-        $temp = $query = '';
+        $query = '';
     }
 
-    if($temp=='productCategory'  && $query=='add') {
+    if( isset($_GET['action']) ) {
+        $action = $_GET['action'];
+    }
+    else {
+        $action = '';
+    }
+
+    if($action=='productCategory' && $query=='' ) {
         include("modules/product category/index.php");
     }
-    else if($temp=='productCategory' && $query=='edit') {
+    else if($action=='productCategory' && $query=='edit') {
         include("modules/product category/edit.php");
     }
-    else if($temp=='productDetails' && $query=='add') {
+    else if($action=='productDetails' && $query=='') {
         include("modules/product details/index.php");
     }
-    else if($temp=='productDetails' && $query=='edit') {
+    else if($action=='productDetails' && $query=='edit') {
         include("modules/product details/edit.php");
     }
-    else if($temp=='contact') {
+    else if($action=='contact') {
         include("modules/contact/index.php");
     }
     else {

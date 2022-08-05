@@ -1,11 +1,4 @@
-<?php
-     $name = '';
-     if(!empty($_POST)) {
-       $name = getPost('name');
-       $sql_add = "insert into category (name) value ('$name')";
-       execute($sql_add);
-     }
-?>
+
 <style>
 </style>
 <h2>Quản lý sản phẩm</h2>
@@ -56,7 +49,7 @@
         </tr>
         <tr>
           <td>
-            <button type="submit" class="btn btn-success">Thêm</button>
+            <button type="submit" class="btn btn-success form-control">Thêm</button>
           </td>
         </tr>
     </table>

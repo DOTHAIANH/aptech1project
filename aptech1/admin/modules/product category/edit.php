@@ -1,4 +1,5 @@
 <?php
+
     $id = $_GET['id'];
     $sql_category_list = "select * from category where id ='$id' ";
     $categoryList = executeResult($sql_category_list,1);
@@ -30,5 +31,5 @@
         </tr>
     </table>
   </form>
-  <a href="index.php?action=productCategory&query=add">Quay lại</a>
+  <a href="index.php?action=productCategory">Quay lại</a>
 </div>

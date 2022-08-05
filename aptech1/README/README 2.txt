@@ -50,8 +50,7 @@ CREATE TABLE product (
     amount int,
     thumbnail varchar(50),
     description text,
-    status int,
-	category_id int REFERENCES category(id)
+    status int
 )
 
 
