@@ -29,6 +29,12 @@
     else if($action=='contact') {
         include("modules/contact/index.php");
     }
+    else if($action=='infoSite' && $query=='' ) {
+        include("modules/infoSite/index.php");
+    }
+    else if($action=='infoSite' && $query=='edit' ) {
+        include("modules/infoSite/edit.php");
+    }
     else {
         include("modules/welcome.php");
     }

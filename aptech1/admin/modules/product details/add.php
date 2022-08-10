@@ -16,6 +16,5 @@
       move_uploaded_file($thumbnail_tmp,'uploads/'.$thumbnail);
       execute($sql_add);
       header('Location:../../index.php?action=productDetails');
-      
     }
 ?>

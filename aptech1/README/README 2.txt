@@ -28,7 +28,7 @@ VALUES
 ('admin','admin123',0)
 --------------------------------------------------------------------------
 CREATE TABLE user (
-	id INt PRIMARY KEY AUTO_INCREMENT,
+	id int PRIMARY KEY AUTO_INCREMENT,
     fullname varchar(50),
     email varchar(100),
     password varchar(30),
@@ -60,14 +60,20 @@ CREATE TABLE product (
 
 
 
-create Table infoSite( 
+create Table infosite( 
     id int PRIMARY KEY AUTO_INCREMENT,
     address varchar(100),
     phone_number varchar(100),
     email varchar(100),
-    title text,
-    facebook varchar(100),
-    instagram varchar(100),
+    title varchar(50),
+    description text,
+    facebook varchar(200),
+    instagram varchar(200),
+    youtube varchar(200),
+    zalo varchar(200),
     logo varchar(100)
 )
+
+INSERT INTO infosite (address,phone_number,email,title,description,facebook,instagram,youtube,zalo,logo) 
+VALUES('','','','','','','','','','')
 
