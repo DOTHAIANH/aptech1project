@@ -47,10 +47,6 @@
                         Bạn chưa có tài khoản đăng ký
                         <a href="index.php?route=register" class="btn-link-style btn-register">Tại đây</a>
                     </p>
-                    <p>
-                        Bạn quên mật khẩu lấy lại
-                        <a href="index.php?route=forgot" class="btn-link-style btn-register">Tại đây</a>
-                    </p>
                 </div>
             </div>
         </div>

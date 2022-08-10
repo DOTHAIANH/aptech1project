@@ -19,13 +19,10 @@
         include("main/contact.php");
     }
     else if($temp=='register') {
-        include("register-login/register.php");
+        include("user/register.php");
     }
     else if($temp=='login') {
-        include("register-login/login.php");
-    }
-    else if($temp=='forgot') {
-        include("register-login/change-pwd.php");
+        include("user/login.php");
     }
     else if($temp=='sale') {
         include("main/sale.php");
