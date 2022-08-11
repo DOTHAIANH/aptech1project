@@ -115,21 +115,14 @@
                         <div class="col-12">
                             <div class="title_tabs">
                                 <ul>
-                                    <li class="tabs_link">
-                                        <span>Skateboard</span>
-                                    </li>
-                                    <li class="tabs_link">
-                                        <span>Clothing</span>
-                                    </li>
-                                    <li class="tabs_link">
-                                        <span>Accessories</span>
-                                    </li>
-                                    <li class="tabs_link">
-                                        <span>Hardware</span>
-                                    </li>
-                                    <li class="tabs_link">
-                                        <span>Shoes</span>
-                                    </li>
+                                   <?php
+                                    foreach($categoryList as $item)
+                                        echo "
+                                        <li class='tabs_link'>
+                                            <span>".$item['name']."</span>
+                                        </li>
+                                        ";
+                                   ?>
                                 </ul>
                                 <div class="content_tabs">
                                     <div class="products">

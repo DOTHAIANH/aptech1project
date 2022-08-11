@@ -1,3 +1,12 @@
+<?php 
+    require_once('./config/dbhelp.php');
+    $sql_infosite_select = 'select * FROM infosite WHERE 1';
+    $infoList = executeResult($sql_infosite_select,1);
+
+    $sql_category_select = 'select * FROM category';
+    $categoryList = executeResult($sql_category_select);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +14,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aptech1 Project</title>
+    <title><?php echo $infoList['title']?></title>
+    <link rel="icon" type="image/x-icon" href="./img/logo/<?php echo $infoList['logo']?>">
     
     <!-- Styles  -->
     <link rel="stylesheet" href="css/style.css">

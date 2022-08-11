@@ -1,11 +1,12 @@
+
 <header>
         <div class="container">
             <div class="header-main">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="" class="logo-wrapper">
-                                <img src="img/header/logo.webp" alt="logo">
+                            <a href="index.php" class="logo-wrapper">
+                                <img src="img/logo/<?php echo $infoList['logo']?>" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -44,7 +45,7 @@
                                 <div class="info">
                                     <strong>Hỗ trợ</strong>
                                     <p>
-                                        <a href="">0972848828</a>
+                                        <a href="callto:<?php echo $infoList['phone_number']?>"><?php echo $infoList['phone_number']?></a>
                                     </p>
                                 </div>
                             </div>

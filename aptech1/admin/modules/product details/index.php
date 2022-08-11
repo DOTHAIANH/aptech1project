@@ -2,10 +2,14 @@
 <style>
 </style>
 <h2>Quản lý sản phẩm</h2>
-
+<style>
+  input,textarea {
+    width: 100%;
+  }
+</style>
 <div class="container mt-3">
   <form method="post"  action="modules/product details/add.php" enctype="multipart/form-data">
-    <table class="table" style="width: 100%;">
+    <table class="table table-bordered" ">
             <h3>Thêm sản phẩm</h3>
         <tr>
           <td>Tên sản phẩm</td>
@@ -32,12 +36,12 @@
           </td>
         </tr>
         <tr>
-        <tr>
           <td>Tóm tắt</td>
           <td>
-              <textarea rows="5" name="description" style="resize: none;"></textarea>
+              <textarea rows="8" name="description" style="resize: none;"></textarea>
           </td>
         </tr>
+      
         <tr>
           <td>Tình trạng</td>
           <td>
@@ -47,27 +51,25 @@
               </select>
           </td>
         </tr>
-        <tr>
-          <td>
-            <button type="submit" class="btn btn-success form-control">Thêm</button>
-          </td>
-        </tr>
     </table>
+      <button type="submit" class="btn btn-success form-control">Thêm</button>
   </form>
 </div>
 
-<?php 
+ 
     $sql_product_select = "select * from product";
     $productList = executeResult($sql_product_select);
-    // if($productList['status'] === 1) {
-    //   $productList['status'] = 'on';
+    // foreach($productList as $item) {
+    //   if($item['status'] == 1) {
+    //      $item['status'] = 'Kich hoat';
+    //   }
+    //   else {
+    //     $item['status'] = 'An';
+    //   }
     // }
-    // else {
-    //   $productList['status'] = 'off';
-    // }
-?>
+
 <h3>Liệt kê sản phẩm</h3>           
-  <table class="table table-bordered" >
+  <table class="table table-striped" >
     <thead>
       <tr>
         <th>No</th>
@@ -82,29 +84,16 @@
       </tr>
     </thead>
     <tbody>
-      <?php 
+       <?php
       $index = 0;
       foreach($productList as $item)
-        echo "<tr>
-        <td>".++$index."</td>
-        <td>".$item['product_name']."</td>
-        <td>".$item['price']."</td>
-        <td>".$item['amount']."</td>
-        <td>
-          <img src='modules/product details/uploads/'".$item["thumbnail"]." type='IMG_JPG' alt='Hình ảnh'>
-        </td>
-        <td>".$item['description']."</td>
-        <td>".$item['status']."</td>
-        <td>
-        <a href='?action=productDetails&query=edit&id=".$item["id"]." '>
-            <button class='btn btn-danger'>Sửa</button>
-          </a>
-        </td>
-        <td>
-          <a href='modules/product details/delete.php?id=".$item["id"]." '>
-            <button class='btn btn-danger'>Xóa</button>
-          </a>
-        </td>
-        ";?>
+      
+          <tr>
+        <td> echo ++$index </td>
+        <td> echo $item['product_name']</td>
+        <td> echo $item['price'] </td>
+        <td> echo $item['amount']</td>
+          </tr>
+          ?>
     </tbody>
   </table>

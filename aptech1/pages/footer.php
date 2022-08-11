@@ -5,8 +5,8 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="footer-widget">
-                                <a href="" class="logo-wrapper">
-                                    <img src="./assets/img/footer/logo-footer.webp" alt="">
+                                <a href="index.php" class="logo-wrapper">
+                                    <img src="img/logo/<?php echo $infoList['logo']?>" alt="logo">
                                 </a>
                                 <div class="text-donate-footer" style="margin-top: 15px">
                                     <p>
@@ -24,13 +24,23 @@
                                 </h3>
                                 <ul class="inline-list social-icons">
                                     <li>
-                                        <a href="" class="icon-fallback-text">
+                                        <a href="<?php echo $infoList['facebook']?>" class="icon-fallback-text">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="" class="icon-fallback-text">
+                                        <a href="<?php echo $infoList['instagram']?>" class="icon-fallback-text">
                                             <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo $infoList['youtube']?>" class="icon-fallback-text">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo $infoList['zalo']?>" class="icon-fallback-text">
+                                            <img src="//bizweb.dktcdn.net/100/345/407/themes/706150/assets/zalo.png?1656415239934" alt="zalo">
                                         </a>
                                     </li>
                                 </ul>
@@ -43,11 +53,15 @@
                                     <span>Địa chỉ cửa hàng</span>
                                 </h3>
                                 <h4 style="margin-top:22px;">Địa chỉ</h4>
-                                <p>221 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. HCM</p>
+                                <p><?php echo $infoList['address']?></p>
                                 <h4 style="margin-top:22px;">Hỗ trợ & tư vấn</h4>
-                                <p><a href="">0909063600</a></p>
+                                <p>
+                                    <a href="callto:<?php echo $infoList['phone_number']?>"><?php echo $infoList['phone_number']?></a>
+                                </p>
                                 <h4>Email</h4>
-                                <p><a href="">saigonskateshop@gmail.com</a></p>
+                                <p>
+                                            <a href="mailto:"><?php echo $infoList['email']?></a>
+                                </p>
                             </div>
                         </div>
                     </div>

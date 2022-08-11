@@ -50,15 +50,9 @@ CREATE TABLE product (
     amount int,
     thumbnail varchar(50),
     description text,
-    status int
+    status int,
+    category_id int references category(id)
 )
-
-
-
----
-
-
-
 
 create Table infosite( 
     id int PRIMARY KEY AUTO_INCREMENT,
@@ -77,3 +71,7 @@ create Table infosite(
 INSERT INTO infosite (address,phone_number,email,title,description,facebook,instagram,youtube,zalo,logo) 
 VALUES('','','','','','','','','','')
 
+CREATE TABLE gallery (
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name_img varchar(200)
+)

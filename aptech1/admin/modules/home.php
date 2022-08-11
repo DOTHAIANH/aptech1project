@@ -35,6 +35,9 @@
     else if($action=='infoSite' && $query=='edit' ) {
         include("modules/infoSite/edit.php");
     }
+    else if($action=='gallery' && $query=='' ) {
+        include("modules/gallery/index.php");
+    }
     else {
         include("modules/welcome.php");
     }

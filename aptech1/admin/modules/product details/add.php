@@ -1,12 +1,13 @@
 <?php
     require_once('../../../config/dbhelp.php');
-    $product_name = $price = $amount = $thumbnail = $description = $status = ''; 
+    $product_name = $price = $amount = $thumbnail = $description = $status = $category_name = ''; 
     if(!empty($_POST)) {
       $product_name = $_POST['product_name'];
       $price = $_POST['price'];
       $amount = $_POST['amount'];
       $description = $_POST['description'];
       $status = $_POST['status'];
+      // $category = $_POST['category'];
 
       $thumbnail = $_FILES['thumbnail']['name'];
       $thumbnail_tmp = $_FILES['thumbnail']['tmp_name'];

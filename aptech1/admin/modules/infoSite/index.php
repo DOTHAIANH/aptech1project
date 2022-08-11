@@ -3,12 +3,15 @@
   $infoList = executeResult($sql_select,1);
 ?>
 
+<style>
+  input,textarea {
+    width: 100%;;
+  }
+</style>
 <div class="container mt-3">
+    <h2>Quản lý thông tin</h2>
   <form method="POST"  action="modules/infosite/edit.php" enctype="multipart/form-data">
-    <table class="table">
-        <tr>
-          <th>Quản lý thông tin</th>
-        </tr>
+    <table class="table table-bordered">
         <tr>
           <td>Địa chỉ</td>
           <td>
@@ -36,7 +39,8 @@
         <tr>
           <td>Mô tả</td>
           <td>
-              <textarea value="<?php echo $infoList['description']?>" rows="5" name="description" style="resize: none;">
+              <textarea rows="10" name="description" style="resize: none;">
+              <?php echo $infoList['description']?>
               </textarea>
           </td>
         </tr>
@@ -71,11 +75,7 @@
               <input type="file" name="logo" value="<?php echo $infoList['logo'] ?>">
           </td>
         </tr>
-        <tr>
-          <td>
-            <button type="submit" class="btn btn-warning">Cập nhật</button>
-          </td>
-        </tr>
     </table>
+    <button type="submit" class="btn btn-warning">Cập nhật</button>
   </form>
 </div>
