@@ -1,3 +1,16 @@
+<?php
+     session_start();
+    if(!empty($_POST['exit'])) {
+      unset($_SESSION['admin']);
+      header('location: login.php');
+      // die();
+    }
+    
+    if(!isset($_SESSION["admin"])){
+      header("location:login.php");
+      // die();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,20 +51,15 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/logo.png" alt="profile"/>
+              <img src="https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-admin-rolls-glyph-black-icon-png-image_691507.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
             <a class="dropdown-item">
-                <i class="ti-user text-primary"></i>
-                Đổi mật khẩu
-              </a>
               <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Cài đặt
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Thoát
+                <form method="post">
+                  <i class="ti-power-off text-primary"></i>
+                  <input name="exit" type="submit"  value="Thoát">
+                </form>
               </a>
             </div>
           </li>
@@ -79,11 +87,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=gallery">
-              <span class="menu-title">Quản lý hình ảnh</span>
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="index.php?action=productCategory">
               <span class="menu-title">Quản lý danh mục sản phẩm</span>
             </a>
@@ -94,13 +97,18 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.php?action=order">
+              <span class="menu-title">Quản lý don hang</span>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?action=news">
               <span class="menu-title">Quản lý bài viết</span>
             </a>
-          </li>
+          </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=newsCategory">
-              <span class="menu-title">Quản lý danh mục bài viết</span>
+            <a class="nav-link" href="index.php?action=users">
+              <span class="menu-title">Quản lý người dùng</span>
             </a>
           </li>
           <li class="nav-item">

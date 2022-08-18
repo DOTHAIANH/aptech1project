@@ -37,40 +37,20 @@
                                     <span>Home</span>
                                 </a>
                             </li>
-                            <li>                          
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <span>Skateboards</span>
-                                    <i class="fa-solid fa-angle-down"></i>                             
-                            </li>
-                            <li>
-                                
-                                <a href="">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <span>Clothing</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </a>
-                                
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <span>Accessorires</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <span>Customer services</span>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa-solid fa-caret-right"></i> 
-                                    Sale
-                                </a>
-                            </li>
+<?php 
+    $select_category = "select * from category";
+    $categoryList = executeResult($select_category);
+    foreach($categoryList as $items) {
+        echo "
+        <li>   
+            <a href='index.php?route=category&id=".$items["id"]."'>
+                <i class='fa-solid fa-caret-right'></i>
+                <span>".$items['name']."</span> 
+            </a>                            
+        </li>
+        ";
+    }
+?>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +58,12 @@
                     <div class="all_Product">
                         <div class="title_Product">
                             <p>
-                                SKATEBOARDS
+                            <?php 
+                                $id = $_GET['id'];
+                                $query_category= "select * from category where id = '$id'";
+                                $category_name = executeResult($query_category,1);
+                                echo $category_name['name'];
+                            ?>
                             </p>
                             <div class="sort-by" id="sort-by">
                                 <ul>
@@ -101,74 +86,38 @@
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-3">
+                            <div class="header-search" style="margin-bottom: 30px;">
+                                    <form class="input-group search-bar" method="get" role="search">
+                                        <input type="text" name="query" value="" placeholder="Tìm kiếm... " class="input-group-field st-default-search-input search-text" autocomplete="off">
+                                        <span class="input-group-btn">
+                                            <button class="btn icon-fallback-text">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </span>
+                                    </form>
+                                </div>
+<?php 
+$query_productByCategory = "SELECT *,product.id as product_id from product inner join category WHERE product.category_id = category.id AND category.id = '$id' AND product.status = 1";
+$productInfo = executeResult($query_productByCategory);
+foreach($productInfo as $item) {?>
+                                <div class="col-3" >
                                     <div class="product-box">
                                         <div class="product-thumbnail">
-                                            <a href="">
-                                                <img src="img/slideforall/van14.png" alt="product">
+                                            <a href="index.php?route=details&id=<?php echo $item["product_id"]?>">
+                                                <img src="img/product/<?php echo $item['thumbnail']?>" alt="<?php echo $item['thumbnail'] ?>">
                                             </a>
                                         </div>
                                         <div class="product-info">
-                                            <h3 class="product-name"><a href="index.php?route=details">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
+                                            <h3 class="product-name"><a href="index.php?route=details&id=<?php echo $item["product_id"]?>"><?php echo $item['product_name'] ?></a></h3>
                                             <div class="price-box">
                                                 <div class="special-price">
-                                                    <span>3.450.000đ</span>
+                                                    <span><?php echo $item['price'] ?></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-                                            <a href="">
-                                                <img src="img/slideforall/van12.png" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="product-info">
-                                            <h3 class="product-name"><a href="">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
-                                            <div class="price-box">
-                                                <div class="special-price">
-                                                    <span>3.450.000đ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-                                            <a href="">
-                                                <img src="img/slideforall/van13.png" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="product-info">
-                                            <h3 class="product-name"><a href="">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
-                                            <div class="price-box">
-                                                <div class="special-price">
-                                                    <span>3.450.000đ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-                                            <a href="">
-                                                <img src="img/slideforall/van11.png" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="product-info">
-                                            <h3 class="product-name"><a href="">PRIMITIVE UNIVERSAL SURVIVALTEAM CUSTOM COMPLETE 8.125</a></h3>
-                                            <div class="price-box">
-                                                <div class="special-price">
-                                                    <span>3.450.000đ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+<?php }?>
                             </div>
                         </div>
                     </div>

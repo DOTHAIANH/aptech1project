@@ -26,6 +26,15 @@
     else if($action=='productDetails' && $query=='edit') {
         include("modules/product details/edit.php");
     }
+    else if($action=='order' && $query=='') {
+        include("modules/order/index.php");
+    }
+    else if($action=='order' && $query=='edit') {
+        include("modules/order/edit.php");
+    }
+    else if($action=='users') {
+        include("modules/users/index.php");
+    }
     else if($action=='contact') {
         include("modules/contact/index.php");
     }
@@ -34,9 +43,6 @@
     }
     else if($action=='infoSite' && $query=='edit' ) {
         include("modules/infoSite/edit.php");
-    }
-    else if($action=='gallery' && $query=='' ) {
-        include("modules/gallery/index.php");
     }
     else {
         include("modules/welcome.php");

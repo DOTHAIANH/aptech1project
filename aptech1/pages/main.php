@@ -18,14 +18,20 @@
     else if($temp=='contact') {
         include("main/contact.php");
     }
+    else if($temp=='news') {
+        include("main/news.php");
+    }
+    else if($temp=='checkout') {
+        include("main/checkout.php");
+    }
+    else if($temp=='complete') {
+        include("main/complete.php");
+    }
     else if($temp=='register') {
-        include("user/register.php");
+        include("users/register.php");
     }
     else if($temp=='login') {
-        include("user/login.php");
-    }
-    else if($temp=='sale') {
-        include("main/sale.php");
+        include("users/login.php");
     }
     else {
         include("main/index.php");

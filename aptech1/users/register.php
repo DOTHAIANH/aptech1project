@@ -1,4 +1,28 @@
-        <!-- Content  -->
+<?php
+$fullname = $email = $password = $confirmPwd = $created_at =  '';
+if(!empty($_POST)) {
+    $fullname = getPOST('fullname');
+    $email = getPOST('email');
+    $password = getPwdSecurity(getPOST('password'));
+    $created_at = date('Y-m-d H:i:s');
+
+    // setcookie('fullname',$fullname,);
+    
+    $select_user = "select * from users where email = '$email'";
+    if(executeResult($select_user) != null)
+    {   
+        echo"<script>alert('Email đã tồn tại')</script>";
+    } 
+    else {
+        $insert_user= "INSERT INTO users (fullname,email,password,created_at)
+        VALUES ('$fullname','$email','$password','$created_at')";
+        execute($insert_user);  
+        echo"<script>alert('Đăng kí thành công')</script>";
+    }
+}
+?>
+ 
+ <!-- Content  -->
         <section class="bread-crumb">
         <div class="container">
             <div class="row">
@@ -28,21 +52,22 @@
                 <div class="title-head">
                     <span>Đăng ký tài khoản</span>
                 </div>
-                <form action="" method="post">
+                <form method="post" id="RegisterForm">
                     <div class="form-group">
-                        <input required type="text" name="fullname" placeholder="Họ tên*" id="fullname" class="form-control">
+                        <input required type="text" name="fullname" placeholder="Họ tên*"  class="form-control">
                     </div>
                     <div class="form-group">
-                        <input required type="text" name="phone_number" placeholder="Số điện thoại*" id="phone_number" class="form-control">
+                        <input required type="email" name="email" placeholder="Email*"  class="form-control">
                     </div>
                     <div class="form-group">
-                        <input required type="email" name="email" placeholder="Email*" id="email" class="form-control">
+                        <input required type="password" name="password" placeholder="Mật khẩu*" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input required type="password" name="password" placeholder="Mật khẩu*" id="email" class="form-control">
+                        <input required type="password" name="confirmPwd"  placeholder="Nhập lại mật khẩu*" class="form-control">
+                        <span id='message'></span>
                     </div>
                     <div class="form-group">
-                        <input class="btn btn-style btn-primary btn-full" type="submit" value="ĐĂNG KÝ">
+                        <input class="btn btn-style btn-primary btn-full" type="submit"  value="ĐĂNG KÝ">
                     </div>
                 </form>
                 <div class="col-xs-12">
@@ -53,3 +78,15 @@
                 </div>
             </div>
         </div>
+
+<script type="text/javascript">  
+	$(function() {
+		$('#RegisterForm').submit(function() {
+			if($('[name=password]').val() != $('[name=confirmPwd]').val()) {
+				alert('Mật khẩu không trùng khớp')
+				return false;
+			}
+			return true;
+		})
+	})
+</script> 

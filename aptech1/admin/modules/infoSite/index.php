@@ -1,5 +1,5 @@
 <?php
-  $sql_select = 'select * FROM infosite WHERE 1';
+  $sql_select = 'select * FROM infosite';
   $infoList = executeResult($sql_select,1);
 ?>
 

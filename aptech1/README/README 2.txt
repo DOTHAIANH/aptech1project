@@ -6,6 +6,7 @@
     - checkout.php
     - complete.php
     - contact.php
+    - news.php
     - register/login.php
 
 
@@ -20,20 +21,22 @@
 CREATE TABLE admin (
 	id int PRIMARY KEY AUTO_INCREMENT,
     username varchar(100),
-    password varchar(100),
-    admin_status int
+    password varchar(100)
 )
 INSERT INTO admin (username,password,admin_status) 
 VALUES
 ('admin','admin123',0)
 --------------------------------------------------------------------------
-CREATE TABLE user (
+CREATE TABLE users (
 	id int PRIMARY KEY AUTO_INCREMENT,
     fullname varchar(50),
     email varchar(100),
     password varchar(30),
   	created_at datetime
 )
+
+alter table users
+add token varchar(32)
 
 CREATE TABLE contact (
 	id int PRIMARY KEY AUTO_INCREMENT,
@@ -69,9 +72,6 @@ create Table infosite(
 )
 
 INSERT INTO infosite (address,phone_number,email,title,description,facebook,instagram,youtube,zalo,logo) 
-VALUES('','','','','','','','','','')
+VALUES('221 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. HCM','036450187328','saigonskateshop@gmail.com','Aptech1Project','Nhờ sự ủng hộ mạnh mẽ từ những người có cùng đam mê khắp nơi trên cả nước, chúng tôi tự hào là một trong những Skateshops chuyên nghiệp nhất Việt Nam ở thời điểm hiện tại.','','','','','')
 
-CREATE TABLE gallery (
-	id int PRIMARY KEY AUTO_INCREMENT,
-    name_img varchar(200)
-)
+ 

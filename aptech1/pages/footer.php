@@ -11,11 +11,7 @@
                                 <div class="text-donate-footer" style="margin-top: 15px">
                                     <p>
                                         <span>
-                                            Nhờ sự ủng hộ mạnh mẽ từ những 
-                                            người có cùng đam mê khắp nơi trên 
-                                            cả nước, chúng tôi tự hào là một 
-                                            trong những Skateshops chuyên 
-                                            nghiệp nhất Việt Nam ở thời điểm hiện tại.                                                                                 
+                                        <?php echo $infoList['description']?>                                                                                
                                         </span>
                                     </p>
                                 </div>

@@ -1,19 +1,22 @@
 <?php 
+    session_start();
     require_once('../config/dbhelp.php');
+    require_once('../utils/utility.php');
     $username = $pwd = '';
     if(!empty($_POST)) {
         $username = $_POST['username'];
         $pwd = $_POST['pwd'];
 
-        $sql = "select * from admin where username = '$username' and password = '$pwd'";
-        $admin = executeResult($sql,1);
+        $select_admin = "select * from admin where username = '$username' and password = '$pwd'";
+        $admin = executeResult($select_admin,1);
         if($admin != null ) {
             //success
-            header('../modules/home.php');
+            $_SESSION['admin'] = $username;
+            header('Location: index.php');
         }
         else {
             //failed
-            echo "<script>alert('Login failed')</script>";
+            echo "<script>alert('Tài khoản không đúng.Vui lòng đăng nhập lại')</script>";
         }
     }
 ?>  
@@ -45,11 +48,6 @@
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                <a href="../../aptech1">
-                  <img src="images/logo.png" alt="logo">
-                </a>
-              </div>
 
               <form class="pt-3" method="post">
                 <div class="form-group">

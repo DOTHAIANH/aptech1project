@@ -12,7 +12,7 @@
     text-decoration: none;
 }
 
-.contact h1 {
+.contact h1.title-head {
     font-size: 30px;
     font-weight: 400;
     display: inline-block;
@@ -41,6 +41,42 @@
 
 .f-left {
     float: left !important;
+}
+
+.box-maps {
+    margin-top: 50px;
+}
+
+.box-maps #map {
+    height: 450px;
+    width: 100%;
+}
+
+.page_contact h2 {
+    font-size: 21px;
+    color: #252525;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.page_contact {
+    position: absolute;
+    background: #fff;
+    width: 350px;
+    padding: 30px 25px;
+    bottom: 7px;
+    right: 0;
+    border-radius: 30px;
+    border: solid #ccc 1px;
+}
+
+.title-head {
+    font-size: 585714em;
+    font-weight: 700;
+    color: #363636;
+    text-decoration: none;
+    margin-top: 0;
 }
 
 .form-group {

@@ -13,19 +13,7 @@
                     <div class="col-md-9">
                         <div class="in-col-md-9">
                             <div class="pull-left">
-                                <div class="header-search">
-                                    <div class="icon-search">
-
-                                    </div>
-                                    <form class="input-group search-bar" method="get" role="search">
-                                        <input type="search" name="query" value="" placeholder="Tìm kiếm... " class="input-group-field st-default-search-input search-text" autocomplete="off">
-                                        <span class="input-group-btn">
-                                            <button class="btn icon-fallback-text">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                            </button>
-                                        </span>
-                                    </form>
-                                </div>
+                                
                             </div>
                             <!-- <div class="header-block-item">
                                 <div class="icon">
@@ -82,16 +70,13 @@
                             <a href="index.php">TRANG CHỦ</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php?route=category">SẢN PHẨM</a>
+                            <a href="index.php?route=category&id=1">SẢN PHẨM</a>
                         </li>
                         <li class="nav-item">
                             <a href="index.php?route=news">TIN TỨC</a>
                         </li>
                         <li class="nav-item">
                             <a href="index.php?route=contact">LIÊN HỆ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="index.php?route=sale">GIẢM GIÁ</a>
                         </li>
                     </ul>
                 </div>

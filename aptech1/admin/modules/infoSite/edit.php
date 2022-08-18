@@ -13,6 +13,7 @@
 
         $logo = $_FILES['logo']['name'];
         $logo_tmp = $_FILES['logo']['tmp_name'];
+        $logo = time().'_'.$logo;
 
         $sql_update = "update infosite 
         SET address='$address',phone_number='$phone_number',email='$email',title='$title',description='$description',

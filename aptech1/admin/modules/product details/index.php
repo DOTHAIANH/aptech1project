@@ -1,12 +1,10 @@
-
-<style>
-</style>
-<h2>Quản lý sản phẩm</h2>
 <style>
   input,textarea {
     width: 100%;
   }
 </style>
+<h2>Quản lý sản phẩm</h2>
+
 <div class="container mt-3">
   <form method="post"  action="modules/product details/add.php" enctype="multipart/form-data">
     <table class="table table-bordered" ">
@@ -41,12 +39,27 @@
               <textarea rows="8" name="description" style="resize: none;"></textarea>
           </td>
         </tr>
-      
+        <tr>
+          <?php
+            $select_category = "select * from category";
+            $categoryList = executeResult($select_category); 
+          ?>
+          <td>Danh mục</td>
+          <td>
+            <select name="category_id">
+              <?php  
+                foreach($categoryList as $items) {
+                    echo "<option value=".$items['id'].">".$items['name']."</option>"; 
+                }
+              ?>
+          </select>
+          </td>
+        </tr>
         <tr>
           <td>Tình trạng</td>
           <td>
               <select name="status">
-                <option value="1">kích hoạt</option>
+                <option value="1">Kích hoạt</option>
                 <option value="0">Ẩn</option>
               </select>
           </td>
@@ -55,18 +68,6 @@
       <button type="submit" class="btn btn-success form-control">Thêm</button>
   </form>
 </div>
-
- 
-    $sql_product_select = "select * from product";
-    $productList = executeResult($sql_product_select);
-    // foreach($productList as $item) {
-    //   if($item['status'] == 1) {
-    //      $item['status'] = 'Kich hoat';
-    //   }
-    //   else {
-    //     $item['status'] = 'An';
-    //   }
-    // }
 
 <h3>Liệt kê sản phẩm</h3>           
   <table class="table table-striped" >
@@ -79,21 +80,53 @@
         <th>Hình ảnh</th>
         <th>Tóm tắt</th>
         <th>Tình trạng</th>
+        <th>Danh mục</th>
         <th></th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-       <?php
+    <?php
+      $select_product = "select category.name as category_name,product.* 
+      FROM category INNER JOIN product
+      on category.id = product.category_id";
+      $productList = executeResult($select_product);
+      
       $index = 0;
       foreach($productList as $item)
-      
-          <tr>
-        <td> echo ++$index </td>
-        <td> echo $item['product_name']</td>
-        <td> echo $item['price'] </td>
-        <td> echo $item['amount']</td>
-          </tr>
-          ?>
+      {
+      ?>
+                <tr>
+                  <td><?php echo ++$index ?></td>
+                  <td><?php echo $item['product_name']?></td>
+                  <td><?php echo $item['price']?></td>
+                  <td><?php echo $item['amount']?></td>
+                  <td>
+                    <img src=' ../img/product/<?php echo $item["thumbnail"]?>' alt='<?php echo $item["thumbnail"]?>'>
+                  </td>
+                  <td><?php echo $item['description']?></td>
+                  <td>
+                    <?php if($item['status'] == 1) {
+                      echo 'Kích hoat';
+                    }
+                    else {
+                      echo 'Ẩn';
+                    }?>
+                  </td>
+                  <td>
+                    <?php echo $item['category_name']?>
+                  </td>
+                  <td>
+                  <a href='?action=productDetails&query=edit&id=<?php echo $item["id"]?>]'>
+                      <button class='btn btn-warning'>Sửa</button>
+                    </a>
+                  </td>
+                  <td>
+                    <a href='modules/product details/delete.php?id=<?php echo $item["id"]?>]'>
+                      <button class='btn btn-danger'>Xóa</button>
+                    </a>
+                  </td>
+                </tr>
+      <?php } ?>   
     </tbody>
   </table>

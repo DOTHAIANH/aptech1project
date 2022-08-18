@@ -1,5 +1,9 @@
 /* DETAIL PRODUCT */
 
+.tab_product_js {
+    display: block;
+}
+
 .detail_Product .detail_info .title_detail_info {
     margin-top: 0;
     font-size: 1.5em;

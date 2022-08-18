@@ -177,7 +177,7 @@ select,
 }
 
 .logo {
-    margin-top: 3px;
+    margin-top: 6px;
 }
 
 .logo img {
@@ -635,6 +635,9 @@ footer .show {
 
 /* TAB_PRODUCT */
 
+
+/* TAB_PRODUCT */
+
 .title-section h2 {
     font-size: 34px;
     margin: 0;
@@ -731,6 +734,23 @@ footer .show {
 
 .item {
     margin-right: 15px;
+}
+
+
+/* BANNER SECOND */
+
+.banner_second .sale-off .title-section h2 a,
+.banner_second .sale-off .title-section a {
+    color: #fff;
+}
+
+.banner_second .sale-off .view_more {
+    margin-top: 40px;
+    transition: all 150ms ease-in-out;
+}
+
+.banner_second .sale-off .view_more:hover a {
+    color: #000;
 }
 
 
@@ -859,13 +879,4 @@ footer .show {
 .range .product-box .product-info .price-box .special-price span {
     font-weight: 600;
     font-size: 1em;
-}
-
-
-/* RESPONSIVE */
-
-@media (min-width:1200px) {
-    .container {
-        max-width: 1200px !important;
-    }
 }

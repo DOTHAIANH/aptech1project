@@ -1,21 +1,29 @@
 <?php
     $id = $_GET['id'];
-    $sql_product_select = "select * from product where id ='$id' ";
-    $productList = executeResult($sql_product_select,1);
+    $select_product = "select * from product where id ='$id' ";
+    $productList = executeResult($select_product,1);
 
+    $product_name = $price = $amount = $image = $description = $status = $category_id = ''; 
     if(!empty($_POST)) {
-        $product_name = $_POST['product_name'];
-        $price = $_POST['price'];
-        $amount = $_POST['amount'];
-        $thumbnail = $_POST['thumbnail'];
-        $description = $_POST['description'];
-        $status = $_POST['status'];
+      $product_name = $_POST['product_name'];
+      $price = $_POST['price'];
+      $amount = $_POST['amount'];
+      $description = $_POST['description'];
+      $status = $_POST['status'];
+      $category_id = $_POST['category_id'];
 
-        $sql_update = "update product set product_name = '$product_name' where id = '$id'";
-        execute($sql_update);
-        echo "<script>alert('Sửa thành công')</script>";
-  }
+      $image = $_FILES['thumbnail']['name'];
+      $image_tmp = $_FILES['thumbnail']['tmp_name'];
+      // $thumbnail = time().'_'.$thumbnail;
+
+      $update_product = "UPDATE `product` SET `id`='$id',`product_name`='$product_name',`price`='$price',`amount`='$amount',
+      `thumbnail`='$thumbnail',`description`='$description',`status`='$status',`category_id`='$category_id' 
+      WHERE id = '$id'";
+      move_uploaded_file($image_tmp,'../img/product/'.$image);
+      execute($update_product);
+    }
 ?>
+
 
 <div class="container mt-3">
   <form method="POST">
@@ -44,23 +52,51 @@
         <tr>
           <td>Hình ảnh</td>
           <td>
-              <img src='modules/product details/uploads/<?php echo $productList['thumbnail'] ?>" type='IMG_JPG' alt='Hình ảnh'>
-              <input type="file" name="thumbnail">
+              <img src='../img/product/<?php echo $productList["thumbnail"]?>' alt='<?php echo $productList ["thumbnail"]?>'>
+              <input type="file" name="image" value="<?php echo $productList['thumbnail'] ?>">
           </td>
         </tr>
         <tr>
         <tr>
           <td>Tóm tắt</td>
           <td>
-              <textarea value="<?php echo $productList['description']?>" rows="5" name="description" style="resize: none;"></textarea>
+              <textarea rows="5" name="description" style="resize: none;">
+                <?php echo $productList['description']?>
+              </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Danh mục</td>
+          <td>
+          <select name="category_id">
+          <?php
+            $select_category = "select * from category";
+            $categoryList = executeResult($select_category); 
+            foreach($categoryList as $item) {
+          ?>   
+              <?php if($item['id'] == $productList['category_id']) {
+                      echo '<option value="'.$item['id'].'" selected>'.$item['name'].'</option>';
+                    }
+                    else {
+                      echo '<option value="'.$item['id'].'" >'.$item['name'].'</option>';
+                    }?>
+            <?php }?>
+          </select>
           </td>
         </tr>
         <tr>
           <td>Tình trạng</td>
           <td>
-              <select name="status" value=" <?php echo $productList['status'] ?> ">
-                <option value="1">kích hoạt</option>
+              <select name="status">
+                <?php 
+                  if($productList['status'] == 1) {
+                ?>
+                <option value="1" selected>Kích hoạt</option>
                 <option value="0">Ẩn</option>
+                <?php } else {?>
+                  <option value="1">Kích hoạt</option>
+                  <option value="0" selected>Ẩn</option>
+                <?php }?>
               </select>
           </td>
         </tr>
